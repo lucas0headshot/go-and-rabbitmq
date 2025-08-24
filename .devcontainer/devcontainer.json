@@ -1,0 +1,12 @@
+{
+	"name": "Go",
+	"image": "mcr.microsoft.com/devcontainers/go:1-1.24-bookworm",
+	"features": {
+    	"ghcr.io/itsmechlark/features/rabbitmq-server:1.1.1": {},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
+	},
+	"postStartCommand": [
+		"go mod init go-and-rabbitmq",
+		"go get github.com/rabbitmq/amqp091-go"
+	]
+}
